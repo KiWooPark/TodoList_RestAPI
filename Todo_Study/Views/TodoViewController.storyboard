@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dxi-cd-z4P">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--할 일 목록-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TodoVC" id="Y6W-OH-hqX" customClass="TodoViewController" customModule="Todo_Study" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oRl-Eg-qlv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.078431360419999999" green="0.078431360419999999" blue="0.078431360419999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="todoCell" rowHeight="153" id="Fyz-B7-PKg" customClass="TodoListTableViewCell" customModule="Todo_Study" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="153"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fyz-B7-PKg" id="zg2-68-p0x">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSX-Fe-5aQ">
+                                                    <rect key="frame" x="33" y="11" width="41.5" height="131"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTb-9T-iq1">
+                                                    <rect key="frame" x="20" y="11" width="3" height="131"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="3" id="N0E-Zk-rHu"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rma-ad-t7R">
+                                                    <rect key="frame" x="304" y="11" width="90" height="131"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRl-eM-Kwb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="131"/>
+                                                            <color key="tintColor" systemColor="systemGray3Color"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="번개"/>
+                                                            <connections>
+                                                                <action selector="tapProgressButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QCZ-e3-oSw"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiJ-f5-6w5">
+                                                            <rect key="frame" x="30" y="0.0" width="30" height="131"/>
+                                                            <color key="tintColor" systemColor="systemGray3Color"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="번개"/>
+                                                            <connections>
+                                                                <action selector="tapProgressButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tvW-Y3-7LR"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piQ-Es-ZQE">
+                                                            <rect key="frame" x="60" y="0.0" width="30" height="131"/>
+                                                            <color key="tintColor" systemColor="systemGray3Color"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="번개"/>
+                                                            <connections>
+                                                                <action selector="tapProgressButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3kZ-LY-7lV"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.094117634000000006" green="0.094117634000000006" blue="0.094117634000000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="OTb-9T-iq1" firstAttribute="leading" secondItem="zg2-68-p0x" secondAttribute="leadingMargin" id="7cg-O9-HwX"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Rma-ad-t7R" secondAttribute="trailing" id="EzJ-EU-Fn7"/>
+                                                <constraint firstItem="OTb-9T-iq1" firstAttribute="bottom" secondItem="zg2-68-p0x" secondAttribute="bottomMargin" id="L51-tt-ctR"/>
+                                                <constraint firstItem="gSX-Fe-5aQ" firstAttribute="leading" secondItem="OTb-9T-iq1" secondAttribute="trailing" constant="10" id="XmT-8L-tNs"/>
+                                                <constraint firstItem="Rma-ad-t7R" firstAttribute="centerY" secondItem="gSX-Fe-5aQ" secondAttribute="centerY" id="eYX-xX-TCm"/>
+                                                <constraint firstItem="Rma-ad-t7R" firstAttribute="bottom" secondItem="gSX-Fe-5aQ" secondAttribute="bottom" id="hUI-id-RiP"/>
+                                                <constraint firstItem="Rma-ad-t7R" firstAttribute="top" secondItem="gSX-Fe-5aQ" secondAttribute="top" id="kPk-Jv-zRt"/>
+                                                <constraint firstItem="OTb-9T-iq1" firstAttribute="top" secondItem="zg2-68-p0x" secondAttribute="topMargin" id="kws-yc-p3K"/>
+                                                <constraint firstItem="gSX-Fe-5aQ" firstAttribute="top" secondItem="zg2-68-p0x" secondAttribute="topMargin" id="uKU-LL-Dy2"/>
+                                                <constraint firstItem="gSX-Fe-5aQ" firstAttribute="bottom" secondItem="zg2-68-p0x" secondAttribute="bottomMargin" id="wiY-Oa-O74"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.078431360419999999" green="0.078431360419999999" blue="0.078431360419999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="colorView" destination="OTb-9T-iq1" id="5JQ-3f-bct"/>
+                                            <outlet property="titleLabel" destination="gSX-Fe-5aQ" id="G9x-0j-19R"/>
+                                            <outletCollection property="progressButtons" destination="rRl-eM-Kwb" collectionClass="NSMutableArray" id="7Mf-Kb-Dzq"/>
+                                            <outletCollection property="progressButtons" destination="hiJ-f5-6w5" collectionClass="NSMutableArray" id="S2d-UZ-Rlr"/>
+                                            <outletCollection property="progressButtons" destination="piQ-Es-ZQE" collectionClass="NSMutableArray" id="Zkh-Sf-TNE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="XAG-ZW-eyo"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="F7c-ED-lGI"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHN-jS-BSN">
+                                <rect key="frame" x="165.5" y="782" width="83" height="50"/>
+                                <color key="backgroundColor" name="CellColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BWJ-yr-hKV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="추가하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapNewTodoButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Oaw-vD-Ay7"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Lb-du-noD">
+                                <rect key="frame" x="10" y="88" width="394" height="0.0"/>
+                                <subviews>
+                                    <searchBar hidden="YES" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8OH-FI-OK3">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="caP-XT-Egd"/>
+                                        </constraints>
+                                        <color key="barTintColor" name="BackgroundColor"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="0BT-xp-trD"/>
+                                        </connections>
+                                    </searchBar>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.078431360419999999" green="0.078431360419999999" blue="0.078431360419999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6Lb-du-noD" secondAttribute="trailing" constant="10" id="1Ji-T6-bqC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="oRl-Eg-qlv" secondAttribute="bottom" id="GRs-OU-oGq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oRl-Eg-qlv" secondAttribute="trailing" id="Gvq-rZ-Ix6"/>
+                            <constraint firstItem="oRl-Eg-qlv" firstAttribute="top" secondItem="6Lb-du-noD" secondAttribute="bottom" id="Kbh-fp-HdX"/>
+                            <constraint firstItem="oRl-Eg-qlv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Li5-Pz-AMj"/>
+                            <constraint firstItem="6Lb-du-noD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="OA8-0u-lAc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NHN-jS-BSN" secondAttribute="bottom" constant="30" id="eWc-SD-425"/>
+                            <constraint firstItem="NHN-jS-BSN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jWm-g1-2I5"/>
+                            <constraint firstItem="NHN-jS-BSN" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.2" id="jl4-ZU-FoY"/>
+                            <constraint firstItem="6Lb-du-noD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="nhr-dB-UBE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="할 일 목록" id="whQ-LA-hhq">
+                        <barButtonItem key="backBarButtonItem" title=" " id="AZD-BB-z3d"/>
+                        <barButtonItem key="rightBarButtonItem" title="검색" id="5vT-ax-9a2">
+                            <color key="tintColor" red="0.47423875329999998" green="0.67124450209999997" blue="0.83531600240000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="tapSearchButton:" destination="Y6W-OH-hqX" id="V7j-ql-u2F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="todoListTableView" destination="oRl-Eg-qlv" id="wQs-bn-5Zf"/>
+                        <outlet property="todoSearchBar" destination="8OH-FI-OK3" id="yaQ-np-nO5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="57.589285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E9A-Fs-p1a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dxi-cd-z4P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tVR-y0-zRG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemTealColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Uhu-am-ko1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yVo-6f-oAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="번개" width="30" height="30"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.078000001609325409" green="0.078000001609325409" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="CellColor">
+            <color red="0.093999996781349182" green="0.093999996781349182" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
