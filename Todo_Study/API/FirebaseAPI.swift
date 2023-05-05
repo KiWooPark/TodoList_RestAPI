@@ -12,6 +12,7 @@ import Firebase
 
 enum FirebaseAPI {
     
+    // MARK: [UPDATE] ----------
     static func uploadImage(image: UIImage?, completion: @escaping (Result<String?,TodoError>) -> ()) {
         
         guard let image = image else { return completion(.success(nil)) }
@@ -33,6 +34,7 @@ enum FirebaseAPI {
         }
     }
     
+    // MARK: [DELETE] ----------
     static func deleteImage(url: String?, completion: @escaping (Result<Bool,FirebaseError>) -> ()) {
     
         guard let url = url else { return completion(.success(true)) }

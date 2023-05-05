@@ -7,12 +7,17 @@
 
 import UIKit
 
+// MARK: [Class or Struct] ----------
 class PriorityTableViewCell: UITableViewCell {
 
+    // MARK: [@IBOutlet] ----------
     @IBOutlet weak var todoBackgroundView: UIView!
     @IBOutlet var priorityButtons: [UIButton]!
+    
+    // MARK: [Let Or Var] ----------
     var selectedButtonIndex: Int?
     
+    // MARK: [Override] ----------
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -38,6 +43,7 @@ class PriorityTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    // MARK: [Function] ----------
     func configPriorityButton(count: Int?) {
         guard let index = count else { return }
         selectedButtonIndex = index

@@ -7,11 +7,14 @@
 
 import UIKit
 
+// MARK: [Class or Struct] ----------
 class TodoViewController: UIViewController {
     
+    // MARK: [@IBOutlet] ----------
     @IBOutlet weak var todoListTableView: UITableView!
     @IBOutlet weak var todoSearchBar: UISearchBar!
     
+    // MARK: [Let Or Var] ----------
     var progressTodos = [TodoModel]()
     var completedTodos = [TodoModel]()
     
@@ -20,6 +23,7 @@ class TodoViewController: UIViewController {
     
     var isFilter = false
     
+    // MARK: [Override] ----------
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,6 +79,7 @@ class TodoViewController: UIViewController {
         }
     }
     
+    // MARK: [@IBAction] ----------
     @IBAction func tapProgressButton(_ sender: Any) {
         guard let button = sender as? UIButton else { return }
         
@@ -184,7 +189,7 @@ class TodoViewController: UIViewController {
         }
     }
     
-    
+    // MARK: [Function] ----------
     func setup() {
         // 테이블뷰 헤더 등록
         todoListTableView.register(UINib(nibName: "TodoListHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "TodoListHeaderView")
@@ -212,7 +217,7 @@ class TodoViewController: UIViewController {
         }
     }
 }
-
+// MARK: [TableView - DataSource] ----------
 extension TodoViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -367,6 +372,7 @@ extension TodoViewController: UITableViewDataSource {
     }
 }
 
+// MARK: [TableView - Delegate] ----------
 extension TodoViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -414,6 +420,7 @@ extension TodoViewController: UITableViewDelegate {
     }
 }
 
+// MARK: [Extention Delegate] ----------
 extension TodoViewController: NewTodoViewControllerDelegate {
     func addTodo(todo: TodoModel?, progressCount: Int) {
         if progressCount == 2 {

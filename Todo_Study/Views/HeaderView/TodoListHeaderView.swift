@@ -7,8 +7,9 @@
 
 import UIKit
 
+// MARK: [Class or Struct] ----------
 class TodoListHeaderView: UITableViewHeaderFooterView {
 
+    // MARK: [@IBOutlet] ----------
     @IBOutlet weak var titleLabel: UILabel!
-    
 }

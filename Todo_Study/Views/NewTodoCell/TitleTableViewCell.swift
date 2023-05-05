@@ -7,11 +7,14 @@
 
 import UIKit
 
+// MARK: [Class or Struct] ----------
 class TitleTableViewCell: UITableViewCell {
 
+    // MARK: [@IBOutlet] ----------
     @IBOutlet weak var todoBackgroundView: UIView!
     @IBOutlet weak var titleTextField: UITextField!
-    
+
+    // MARK: [Override] ----------
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -33,6 +36,7 @@ class TitleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: [Function] ----------
     func configData(title: String?) {
         titleTextField.text = title ?? ""
     }

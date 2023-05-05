@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-// MARK: Model
+// MARK: [Model] ----------
 struct TodoModel: Codable {
     var id: Int?
     var imageURl: String?
@@ -19,7 +19,6 @@ struct TodoModel: Codable {
     var progressCount: Int?
     var createdDate: String?
     
-    // 서버 X
     var isEdited: Bool? = false
     var image: UIImage?
 

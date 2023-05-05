@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160258582A054FAB001B0B72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 160258572A054FAB001B0B72 /* GoogleService-Info.plist */; };
 		16065CD7298916AA00D1375D /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16065CD6298916AA00D1375D /* TodoModel.swift */; };
 		16065CDA2989172600D1375D /* TodoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16065CD92989172600D1375D /* TodoAPI.swift */; };
 		16166E5329CB50F300B1F4EC /* Extention+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16166E5229CB50F300B1F4EC /* Extention+String.swift */; };
@@ -30,7 +31,6 @@
 		16D7F5772975729B0020AA17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16D7F5762975729B0020AA17 /* Assets.xcassets */; };
 		16D7F57A2975729B0020AA17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D7F5782975729B0020AA17 /* LaunchScreen.storyboard */; };
 		16E30FE829CC349300019917 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 16E30FE729CC349300019917 /* Nuke */; };
-		16E30FEA29CC3ABE00019917 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16E30FE929CC3ABE00019917 /* GoogleService-Info.plist */; };
 		16E30FED29CC3B8700019917 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 16E30FEC29CC3B8700019917 /* FirebaseAuth */; };
 		16E30FEF29CC3B8700019917 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 16E30FEE29CC3B8700019917 /* FirebaseFirestore */; };
 		16E30FF129CC3B8700019917 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 16E30FF029CC3B8700019917 /* FirebaseFirestoreSwift */; };
@@ -40,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160258572A054FAB001B0B72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		16065CD6298916AA00D1375D /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		16065CD92989172600D1375D /* TodoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAPI.swift; sourceTree = "<group>"; };
 		16166E5229CB50F300B1F4EC /* Extention+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extention+String.swift"; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		16D7F5762975729B0020AA17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16D7F5792975729B0020AA17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16D7F57B2975729B0020AA17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16E30FE929CC3ABE00019917 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		16E30FF429CC3BC500019917 /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 		16E30FF629CC5FBF00019917 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,7 +146,7 @@
 				16D7F5762975729B0020AA17 /* Assets.xcassets */,
 				16D7F5782975729B0020AA17 /* LaunchScreen.storyboard */,
 				16D7F57B2975729B0020AA17 /* Info.plist */,
-				16E30FE929CC3ABE00019917 /* GoogleService-Info.plist */,
+				160258572A054FAB001B0B72 /* GoogleService-Info.plist */,
 				16166E5229CB50F300B1F4EC /* Extention+String.swift */,
 			);
 			path = Todo_Study;
@@ -265,7 +265,7 @@
 				16A7C63D29C46E7700F02BF2 /* TodoListHeaderView.xib in Resources */,
 				16D7F57A2975729B0020AA17 /* LaunchScreen.storyboard in Resources */,
 				16D7F5772975729B0020AA17 /* Assets.xcassets in Resources */,
-				16E30FEA29CC3ABE00019917 /* GoogleService-Info.plist in Resources */,
+				160258582A054FAB001B0B72 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

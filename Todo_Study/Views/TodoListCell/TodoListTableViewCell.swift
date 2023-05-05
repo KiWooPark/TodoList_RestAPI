@@ -7,12 +7,15 @@
 
 import UIKit
 
+// MARK: [Class or Struct] ----------
 class TodoListTableViewCell: UITableViewCell {
 
+    // MARK: [@IBOutlet] ----------
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var progressButtons: [UIButton]!
     @IBOutlet weak var colorView: UIView!
     
+    // MARK: [Override] ----------
     override func awakeFromNib() {
         super.awakeFromNib()
      
@@ -34,6 +37,7 @@ class TodoListTableViewCell: UITableViewCell {
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
     }
     
+    // MARK: [Function] ----------
     func configLayout() {
         contentView.layer.cornerRadius = 5
     }

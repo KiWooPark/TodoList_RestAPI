@@ -7,13 +7,17 @@
 
 import UIKit
 
+// MARK: [Class or Struct] ----------
 class EnergyCostsTableViewCell: UITableViewCell {
 
+    // MARK: [@IBOutlet] ----------
     @IBOutlet weak var todoBackgroundView: UIView!
     @IBOutlet var energyCostsButtons: [UIButton]!
+    
+    // MARK: [Let Or Var] ----------
     var selectedButtonIndex: Int?
     
-    
+    // MARK: [Override] ----------
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -39,6 +43,7 @@ class EnergyCostsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: [Function] ----------
     func configEnergyCostsButton(count: Int?) {
         guard let index = count else { return }
         selectedButtonIndex = index

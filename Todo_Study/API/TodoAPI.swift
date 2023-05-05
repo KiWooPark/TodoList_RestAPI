@@ -13,7 +13,7 @@ enum TodosAPI {
     
     static let baseUrl = "https://port-0-container-1ih8d2gld1q6ldo.gksl2.cloudtype.app/api/" + version
     
-    // MARK: CREATE
+    // MARK: [CREATE] ----------
     static func addTodo(todo: TodoModel?, completion: @escaping (Result<TodoModel,TodoError>) -> ()) {
         
         // 1
@@ -67,7 +67,7 @@ enum TodosAPI {
         }.resume() // 6
     }
     
-    // MARK: READ
+    // MARK: [READ] ----------
     static func fetchTodos(completion: @escaping (Result<[TodoModel],TodoError>) -> ()) {
         
         // 1
@@ -114,7 +114,7 @@ enum TodosAPI {
         }.resume() // 4
     }
     
-    // MARK: UPDATE
+    // MARK: [UPDATE] ----------
     static func updateTodo(id: Int, updateData: TodoModel?, completion: @escaping (Result<Int?,TodoError>) -> ()) {
         let urlString = baseUrl + "/todo" + "/\(id)"
         
@@ -160,7 +160,7 @@ enum TodosAPI {
         }.resume()
     }
     
-    // MARK: DELETE
+    // MARK: [DELETE] ----------
     static func deleteTodo(id: Int, completion: @escaping (Result<Int?,TodoError>) -> ()) {
         
         let urlString = baseUrl + "/todo" + "/\(id)"
@@ -199,7 +199,7 @@ enum TodosAPI {
         }.resume()
     }
     
-    // SEARCH
+    // MARK: [SEARCH] ----------
     static func searchTodo(id: Int, completion: @escaping (Result<TodoModel,TodoError>) -> ()) {
         let urlString = baseUrl + "/todo" + "/\(id)"
         

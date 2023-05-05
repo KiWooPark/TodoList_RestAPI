@@ -7,13 +7,15 @@
 
 import UIKit
 
+// MARK: [Class or Struct] ----------
 class ContentTableViewCell: UITableViewCell {
 
+    // MARK: [@IBOutlet] ----------
     @IBOutlet weak var todoBackgroundView: UIView!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var placeholderLabel: UILabel!
     
-    
+    // MARK: [Override] ----------
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -37,6 +39,7 @@ class ContentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: [Function] ----------
     func configData(content: String?) {
         placeholderLabel.isHidden = content != nil ? true : false
         contentTextView.text = content ?? ""

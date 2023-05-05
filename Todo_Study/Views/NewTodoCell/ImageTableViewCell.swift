@@ -8,17 +8,22 @@
 import UIKit
 import Nuke
 
+// MARK: [Protocol] ----------
 protocol ImageTableViewCellDelegate: AnyObject {
     func updateImage(image: UIImage?)
 }
 
+// MARK: [Class or Struct] ----------
 class ImageTableViewCell: UITableViewCell {
 
+    // MARK: [@IBOutlet] ----------
     @IBOutlet weak var todoImageView: UIImageView!
     @IBOutlet weak var addImageButton: UIButton!
     
+    // MARK: [Let Or Var] ----------
     weak var delegate: ImageTableViewCellDelegate?
     
+    // MARK: [Override] ----------
     override func awakeFromNib() {
         super.awakeFromNib()
        
@@ -38,6 +43,8 @@ class ImageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    // MARK: [Function] ----------
     func configData(image: UIImage?, imageUrlStr: String?) {
         if image == nil && imageUrlStr == nil {
             todoImageView.image = nil

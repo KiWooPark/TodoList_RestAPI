@@ -9,7 +9,8 @@ import Foundation
 import Alamofire
 
 extension TodosAPI {
-    // MARK: CREATE
+    
+    // MARK: [CREATE] ----------
     static func addTodoWithAlamofire(data: [String: Any], completion: @escaping (TodoModel) -> ()) {
         
         let urlString = baseUrl + "/todo"
@@ -30,7 +31,7 @@ extension TodosAPI {
         }
     }
     
-    // MARK: READ
+    // MARK: [READ] ----------
     static func fetchTodosWithAlamofire(completion: @escaping ([TodoModel]) -> ()) {
        
         let urlString = baseUrl + "/todos"
@@ -50,7 +51,7 @@ extension TodosAPI {
         }
     }
     
-    // MARK: UPDATE
+    // MARK: [UPDATE] ----------
     static func updateTodoWithAlamofire(id: Int, updateData: [String: Any], completion: @escaping (Int) -> ()) {
         
         let urlString = baseUrl + "/todo" + "/\(id)"
@@ -71,7 +72,7 @@ extension TodosAPI {
             }
     }
     
-    // MARK: DELETE
+    // MARK: [DELETE] ----------
     static func deleteTodoWithAlamofire(id: Int, completion: @escaping (Int) -> ()) {
         
         let urlString = baseUrl + "/todo" + "/\(id)"
@@ -90,7 +91,7 @@ extension TodosAPI {
         }
     }
     
-    // MARK: SEARCH
+    // MARK: [SEARCH] ----------
     static func searchTodoWithAlamofire(id: Int, completion: @escaping (TodoModel) -> ()) {
         
         let urlString = baseUrl + "/todo" + "/\(id)"

@@ -9,16 +9,21 @@ import UIKit
 import PhotosUI
 import Nuke
 
+// MARK: [Protocol] ----------
 protocol NewTodoViewControllerDelegate: AnyObject {
     func didChangeTodo(todo: TodoModel?, progressCount: Int)
     func addTodo(todo: TodoModel?, progressCount: Int)
 }
 
+// MARK: [Class or Struct] ----------
 class NewTodoViewController: UIViewController {
     
+    // MARK: [@IBOutlet] ----------
     @IBOutlet weak var newTodoTableView: UITableView!
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
+    
+    // MARK: [Let Or Var] ----------
     weak var delegate: NewTodoViewControllerDelegate?
     
     var todoData: TodoModel?
@@ -29,6 +34,7 @@ class NewTodoViewController: UIViewController {
     
     var oldImageUrl = ""
     
+    // MARK: [Override] ----------
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +42,7 @@ class NewTodoViewController: UIViewController {
         oldImageUrl = todoData?.imageURl ?? ""
     }
     
+    // MARK: [@IBAction] ----------
     @IBAction func tapDoneButton(_ sender: Any) {
         getCellData()
         
@@ -119,6 +126,7 @@ class NewTodoViewController: UIViewController {
         }
     }
     
+    // MARK: [@objc Function] ----------
     @objc func tapPriorityButton(button: UIButton) {
         todoData?.colorCount = button.tag
         
@@ -172,6 +180,7 @@ class NewTodoViewController: UIViewController {
     }
 }
 
+// MARK: [TableView - DataSource] ----------
 extension NewTodoViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
@@ -214,6 +223,7 @@ extension NewTodoViewController: UITableViewDataSource {
     }
 }
 
+// MARK: [TableView - Delegate] ----------
 extension NewTodoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
@@ -227,6 +237,7 @@ extension NewTodoViewController: UITableViewDelegate {
     }
 }
 
+// MARK: [TextField - Delegate] ----------
 extension NewTodoViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         enabledDoneButton()
@@ -234,6 +245,7 @@ extension NewTodoViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: [TextView Delegate] ----------
 extension NewTodoViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         enabledDoneButton()
@@ -250,6 +262,7 @@ extension NewTodoViewController: UITextViewDelegate {
     }
 }
 
+// MARK: [Extention] ----------
 extension NewTodoViewController {
     func setup() {
         todoData = isNewTodo ? nil : todoData
@@ -287,6 +300,7 @@ extension NewTodoViewController {
     }
 }
 
+// MARK: [PHPickerViewController - Delegate] ----------
 extension NewTodoViewController: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         
